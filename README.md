@@ -59,3 +59,4 @@ Open the provided `localhost` URL in your browser to start exploring EV adoption
 
 ---
 *Created for data mining, AI integration, and market analysis.*
+Live link : https://ev-adoption.onrender.com/
