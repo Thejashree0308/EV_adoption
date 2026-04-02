@@ -10,6 +10,7 @@ import os
 import requests
 import urllib.parse
 import re
+import os
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -563,7 +564,7 @@ if user_input:
         }
         
         # Pull key from streamlit secrets (this ensures it isn't published to Github)
-        api_key = st.secrets.get("GROQ_API_KEY", "")
+        api_key = os.getenv("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY", "")
         headers = {
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
